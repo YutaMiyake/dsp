@@ -1,0 +1,6 @@
+.DS_Store
+/.idea/
+*.iml
+/api/src/app/get-pip.py
+*.code-workspace
+CTRPredictor/haihu_18.csv.zip

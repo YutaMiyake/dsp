@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: notice-app-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: notice-app
+    spec:
+      containers:
+      - name: web
+        image: asia.gcr.io/cyberagent-224/notice:07
+        ports:
+        - containerPort: 8083

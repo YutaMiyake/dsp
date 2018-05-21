@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: dsp-app-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: dsp-app
+    spec:
+      containers:
+      - name: web
+        image: asia.gcr.io/cyberagent-224/dsp:v6
+        ports:
+        - containerPort: 8080

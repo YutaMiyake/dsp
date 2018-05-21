@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ctrpredictor-app-deployment
+spec:
+  replicas: 38
+  template:
+    metadata:
+      labels:
+        app: ctrpredictor-app
+    spec:
+      containers:
+      - name: web
+        image: asia.gcr.io/cyberagent-224/ctrpredictor:v1
+        ports:
+        - containerPort: 8000

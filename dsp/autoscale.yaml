@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: dsp-autoscale
+spec:
+  maxReplicas: 10
+  minReplicas: 2
+  targetCPUUtilizationPercentage: 70
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: dsp-app-deployment

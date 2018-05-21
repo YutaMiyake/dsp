@@ -1,0 +1,38 @@
+version: "3"
+services:
+  dsp:
+    build: ./dsp
+    image: dsp:latest
+    ports:
+      - "8080:8080"
+    environment:
+     - ENV=DEV
+     - AERO_ADDR=aero
+     - AERO_PORT=3000
+  notice:
+    build: ./notice
+    image: notice:latest
+    ports:
+      - "8083:8083"
+    environment:
+     - ENV=DEV
+     - AERO_ADDR=aero
+     - AERO_PORT=3000
+  ctr:
+    build: ./ctrpredictor
+    image: ctrpredictor:latest
+    ports:
+      - "8000:8000"
+  aero:
+    image: aerospike
+    ports:
+     - "3000-3003:3000-3003"
+    volumes:
+     - aero-db:/aero_local_db
+  amc:
+    image: mrbar42/aerospike-amc 
+    ports:
+     - "8081:8081"
+volumes:
+  aero-db:
+    driver: local

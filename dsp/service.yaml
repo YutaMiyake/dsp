@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dsp-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: app
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: dsp-app

@@ -1,0 +1,5 @@
+.DS_Store
+/pkg/
+/bin/
+vendor/
+src/app/app

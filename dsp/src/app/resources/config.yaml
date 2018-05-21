@@ -1,0 +1,6 @@
+env: "{{ env `ENV` `DEV`}}"
+dsp:
+  addr: "{{ env `DSP_ADDR` `:8080`}}"
+aero:
+  addr: "{{env `AERO_ADDR` `localhost`}}"
+  port: "{{env `AERO_PORT` `3000`}}"

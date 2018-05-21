@@ -1,0 +1,122 @@
+[
+    {
+        "id": "adv_01",
+        "budget": 10239,
+        "spent": 0,
+        "cpc": 80
+    },
+    {
+        "id": "adv_02",
+        "budget": 3839,
+        "spent": 0,
+        "cpc": 30
+    },
+    {
+        "id": "adv_03",
+        "budget": 2559,
+        "spent": 0,
+        "cpc": 20
+    },
+    {
+        "id": "adv_04",
+        "budget": 51198,
+        "spent": 0,
+        "cpc": 400
+    },
+    {
+        "id": "adv_05",
+        "budget": 2559,
+        "spent": 0,
+        "cpc": 20
+    },
+    {
+        "id": "adv_06",
+        "budget": 2559,
+        "spent": 0,
+        "cpc": 20
+    },
+    {
+        "id": "adv_07",
+        "budget": 8959,
+        "spent": 0,
+        "cpc": 70
+    },
+    {
+        "id": "adv_08",
+        "budget": 44798,
+        "spent": 0,
+        "cpc": 350
+    },
+    {
+        "id": "adv_09",
+        "budget": 1279,
+        "spent": 0,
+        "cpc": 10
+    },
+    {
+        "id": "adv_10",
+        "budget": 2559,
+        "spent": 0,
+        "cpc": 20
+    },
+    {
+        "id": "adv_11",
+        "budget": 8959,
+        "spent": 0,
+        "cpc": 70
+    },
+    {
+        "id": "adv_12",
+        "budget": 5119,
+        "spent": 0,
+        "cpc": 40
+    },
+    {
+        "id": "adv_13",
+        "budget": 1279,
+        "spent": 0,
+        "cpc": 10
+    },
+    {
+        "id": "adv_14",
+        "budget": 2559,
+        "spent": 0,
+        "cpc": 20
+    },
+    {
+        "id": "adv_15",
+        "budget": 3839,
+        "spent": 0,
+        "cpc": 30
+    },
+    {
+        "id": "adv_16",
+        "budget": 3839,
+        "spent": 0,
+        "cpc": 30
+    },
+    {
+        "id": "adv_17",
+        "budget": 1279,
+        "spent": 0,
+        "cpc": 10
+    },
+    {
+        "id": "adv_18",
+        "budget": 7679,
+        "spent": 0,
+        "cpc": 60
+    },
+    {
+        "id": "adv_19",
+        "budget": 19199,
+        "spent": 0,
+        "cpc": 150
+    },
+    {
+        "id": "adv_20",
+        "budget": 8959,
+        "spent": 0,
+        "cpc": 70
+    }
+]
