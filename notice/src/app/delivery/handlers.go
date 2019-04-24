@@ -45,6 +45,7 @@ func (h *Handlers) NoticeHandler(ctx *fasthttp.RequestCtx) {
 	if err != nil {
 		common.Logger.Error(err)
 	}
+	common.Logger.Infof("[WinNotice] %s", req)
 
 	adIdStr := adId.(string)
 

@@ -16,8 +16,9 @@ import (
 type LogicService interface {
 	XgBoost(req *models.SSPRequest) (bool, *models.SSPResponse, error)
 	XgBoostPlusCRate(req *models.SSPRequest) (bool, *models.SSPResponse, error)
-	FloorPricePlus3(req *models.SSPRequest) (bool, *models.SSPResponse, error)
 	Bakugai5(req *models.SSPRequest) (bool, *models.SSPResponse, error)
+
+	AdtechCompe(req *models.BidRequest) (bool, *models.BidResponse, error)
 }
 
 type logicService struct{
@@ -118,7 +119,7 @@ func (w *logicService) XgBoostPlusCRate(req *models.SSPRequest) (bool, *models.S
 	return true, &res, nil
 }
 
-func (w *logicService) FloorPricePlus3(req *models.SSPRequest) (bool, *models.SSPResponse, error) {
+func (w *logicService) AdtechCompe(req *models.BidRequest) (bool, *models.BidResponse, error) {
 	//common.Logger.Info("BidOrSkip %s", req)
 
 	num := rand.Int()%20+1
@@ -137,13 +138,13 @@ func (w *logicService) FloorPricePlus3(req *models.SSPRequest) (bool, *models.SS
 		return false, nil, nil
 	}
 
-	res := models.SSPResponse{
+	res := models.BidResponse{
 		req.Id,
 		req.FloorPrice+3,
 		advId,
-		"http://35.194.99.70/notice/"+advId,
+		"http://localhost:8083/notice/"+advId,
 	}
-	common.Logger.Infof("Bid Req FP %f Res %s", req.FloorPrice, res)
+	common.Logger.Infof("[Bid Request] FP %f | Response %s", req.FloorPrice, res)
 
 	return true, &res, nil
 }

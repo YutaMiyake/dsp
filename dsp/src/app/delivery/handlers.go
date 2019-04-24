@@ -93,10 +93,9 @@ func (h *Handlers) XgBoostPlusCRate(ctx *fasthttp.RequestCtx) {
 	return
 }
 
-func (h *Handlers) FloorPricePlus3(ctx *fasthttp.RequestCtx) {
-	//common.Logger.Info("bid")
+func (h *Handlers) AdtechCompe(ctx *fasthttp.RequestCtx) {
 
-	var req models.SSPRequest
+	var req models.BidRequest
 	err := json.Unmarshal(ctx.PostBody(), &req)
 	if err != nil {
 		common.Logger.Error(err)
@@ -104,7 +103,7 @@ func (h *Handlers) FloorPricePlus3(ctx *fasthttp.RequestCtx) {
 		return
 	}
 
-	buy, res, err := h.logicSvc.FloorPricePlus3(&req)
+	buy, res, err := h.logicSvc.AdtechCompe(&req)
 
 	if err != nil {
 		common.Logger.Error(err)

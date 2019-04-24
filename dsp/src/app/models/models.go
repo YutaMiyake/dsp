@@ -39,3 +39,23 @@ type PredictRequest struct {
 type PredictResp struct {
 	Ctr string `json:"ctr"`
 }
+
+// for adtech compe ---------------------------------
+type BidRequest struct {
+	Id             string  `json:"id"`
+	FloorPrice     float64 `json:"floorPrice"`
+	DeviceId       string  `json:"deviceId"`
+	MediaId        string  `json:"mediaId"`
+	Timestamp      int64   `json:"timestamp"`
+	OsType         string  `json:"osType"`
+	BannerSize     int64   `json:"bannerSize"`
+	BannerPosition int64   `json:"bannerPosition"`
+	DeviceType     int64   `json:"deviceToken"`
+}
+
+type BidResponse struct {
+	Id           string  `json:"id"`
+	BidPrice     float64 `json:"bid_price"`
+	AdvertiserId string  `json:"advertiser_id"`
+	Nurl         string  `json:"nurl"`
+}

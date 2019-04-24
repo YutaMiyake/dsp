@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"github.com/buaazp/fasthttprouter"
 	"github.com/valyala/fasthttp"
-	"github.com/aerospike/aerospike-client-go"
+	as "github.com/aerospike/aerospike-client-go"
 	"app/models"
 	"io/ioutil"
 	"encoding/json"
@@ -25,7 +25,7 @@ func main() {
 
 type Server struct {
 	Engine   fasthttprouter.Router
-	AeroConn *aerospike.Client
+	AeroConn *as.Client
 	AdList []string
 	AdInfo map[string]*models.Advertiser
 }
@@ -64,9 +64,10 @@ func (s *Server) Route() {
 	})
 	s.Engine.POST("/bid", handlers.XgBoost)
 	s.Engine.POST("/bidPlus", handlers.XgBoostPlusCRate)
-	s.Engine.POST("/floor", handlers.FloorPricePlus3)
 	s.Engine.POST("/bakugai5", handlers.Bakugai5)
 	s.Engine.GET("/aerotest", handlers.AeroTest)
+
+	s.Engine.POST("/adtechCompe", handlers.AdtechCompe)
 }
 
 func loadAeroInfo() ([]string, map[string]*models.Advertiser) {
